@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BloomBetter — AI Postpartum Platform · Maitreyee Gaikwad</title>
+  <meta name="description" content="BloomBetter is an AI-powered postpartum support platform. Full case study coming soon." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #1a1a18;
+      --ink-light: #5a5a55;
+      --ink-faint: #a0a09a;
+      --red: #D85A30;
+      --cream: #faf9f6;
+      --rule: rgba(26,26,24,0.12);
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Inter', -apple-system, sans-serif;
+    }
+    body { font-family: var(--sans); background: var(--cream); color: var(--ink); line-height: 1.7; -webkit-font-smoothing: antialiased; min-height: 100vh; display: flex; flex-direction: column; }
+
+    nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; border-bottom: 0.5px solid var(--rule); }
+    .nav-logo { font-family: var(--serif); font-size: 18px; font-weight: 700; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
+    .nav-back { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-light); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+    .nav-back:hover { color: var(--red); }
+
+    .holding-page {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 48px;
+      max-width: 720px;
+    }
+    .badge {
+      display: inline-block;
+      background: var(--red);
+      color: #fff;
+      font-size: 9px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      font-weight: 700;
+      margin-bottom: 32px;
+    }
+    h1 { font-family: var(--serif); font-size: clamp(40px, 5.5vw, 64px); font-weight: 700; line-height: 1.06; letter-spacing: -0.025em; margin-bottom: 28px; }
+    h1 em { font-style: italic; color: var(--red); }
+    .deck { font-size: 18px; color: var(--ink-light); line-height: 1.8; font-weight: 300; margin-bottom: 48px; max-width: 520px; }
+
+    .what-i-built { margin-bottom: 52px; }
+    .wib-label { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); font-weight: 700; margin-bottom: 20px; display: block; }
+    .wib-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 0.5px solid var(--rule); }
+    .wib-item { padding: 20px 18px; border-right: 0.5px solid var(--rule); border-bottom: 0.5px solid var(--rule); }
+    .wib-item:nth-child(2n) { border-right: none; }
+    .wib-item:nth-last-child(-n+2) { border-bottom: none; }
+    .wib-title { font-family: var(--serif); font-size: 15px; font-weight: 500; margin-bottom: 5px; }
+    .wib-desc { font-size: 12px; color: var(--ink-faint); line-height: 1.55; }
+
+    .notify { border-top: 0.5px solid var(--rule); padding-top: 36px; }
+    .notify p { font-size: 14px; color: var(--ink-light); margin-bottom: 16px; }
+    .notify-form { display: flex; gap: 12px; flex-wrap: wrap; }
+    .notify-input { flex: 1; min-width: 200px; padding: 11px 16px; border: 0.5px solid rgba(26,26,24,0.3); background: transparent; font-family: var(--sans); font-size: 14px; color: var(--ink); outline: none; }
+    .notify-input:focus { border-color: var(--red); }
+    .notify-btn { background: var(--ink); color: #fff; padding: 11px 22px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; border: none; cursor: pointer; white-space: nowrap; transition: background 0.2s; }
+    .notify-btn:hover { background: var(--red); }
+    .notify-confirm { display: none; font-size: 13px; color: var(--red); font-weight: 500; margin-top: 12px; }
+
+    @media (max-width: 600px) {
+      nav { padding: 16px 24px; }
+      .holding-page { padding: 48px 24px; }
+      .wib-grid { grid-template-columns: 1fr; }
+      .wib-item { border-right: none; }
+      .wib-item:nth-last-child(-n+2) { border-bottom: 0.5px solid var(--rule); }
+      .wib-item:last-child { border-bottom: none; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Maitreyee G.</a>
+  <a href="index.html#work" class="nav-back">← All work</a>
+</nav>
+
+<div class="holding-page">
+  <span class="badge">Case study coming soon</span>
+  <h1>BloomBetter —<br>AI support for the<br><em>fourth trimester.</em></h1>
+  <p class="deck">I built an AI-powered postpartum support platform with a conversational chatbot, clinical resource integration, and therapeutic mini-games. The full case study publishes once IP registration is finalized. Here's what I can share now.</p>
+
+  <div class="what-i-built">
+    <span class="wib-label">What I built</span>
+    <div class="wib-grid">
+      <div class="wib-item">
+        <div class="wib-title">Product requirements</div>
+        <p class="wib-desc">Defined user personas, jobs-to-be-done, and feature scope before writing a single line of code. Validated with OBGYNs.</p>
+      </div>
+      <div class="wib-item">
+        <div class="wib-title">AI chatbot (Bloom)</div>
+        <p class="wib-desc">Conversational postpartum support powered by Claude API. Designed the conversation architecture and safety guardrails.</p>
+      </div>
+      <div class="wib-item">
+        <div class="wib-title">Full-stack deployment</div>
+        <p class="wib-desc">Next.js frontend on Vercel, backend API on Railway. Morning check-in email system and therapeutic mini-games.</p>
+      </div>
+      <div class="wib-item">
+        <div class="wib-title">IP & commercial strategy</div>
+        <p class="wib-desc">Established sole ownership via legal agreement with collaborators. Pursuing commercial registration with intent to scale.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="notify">
+    <p>Want to know when the full case study goes live? Leave your email — I'll send one note when it's published.</p>
+    <div class="notify-form">
+      <input type="email" class="notify-input" placeholder="your@email.com" id="notifyEmail" />
+      <button class="notify-btn" id="notifyBtn" onclick="handleNotify()">Notify me</button>
+    </div>
+    <p class="notify-confirm" id="notifyConfirm">Got it — I'll be in touch when it's live.</p>
+  </div>
+</div>
+
+<script>
+  function handleNotify() {
+    const email = document.getElementById('notifyEmail').value;
+    if (!email || !email.includes('@')) {
+      document.getElementById('notifyEmail').focus();
+      return;
+    }
+    document.getElementById('notifyBtn').textContent = 'Done ✓';
+    document.getElementById('notifyBtn').disabled = true;
+    document.getElementById('notifyConfirm').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
