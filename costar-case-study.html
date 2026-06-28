@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Costar Imports — GTM & Product Roadmap · Maitreyee Gaikwad</title>
+  <meta name="description" content="How I built the product roadmap and GTM strategy for a $5M B2B jewellery import business, driving a 30% lift in design performance." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #1a1a18;
+      --ink-light: #5a5a55;
+      --ink-faint: #a0a09a;
+      --red: #D85A30;
+      --cream: #faf9f6;
+      --rule: rgba(26,26,24,0.12);
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Inter', -apple-system, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: var(--cream); color: var(--ink); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+    nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; border-bottom: 0.5px solid var(--rule); background: var(--cream); position: sticky; top: 0; z-index: 100; }
+    .nav-logo { font-family: var(--serif); font-size: 18px; font-weight: 700; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
+    .nav-back { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-light); text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 6px; transition: color 0.2s; }
+    .nav-back:hover { color: var(--red); }
+
+    .cs-header { padding: 80px 48px 64px; border-bottom: 0.5px solid var(--rule); max-width: 760px; }
+    .cs-eyebrow { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); font-weight: 600; margin-bottom: 20px; }
+    h1 { font-family: var(--serif); font-size: clamp(36px, 5vw, 58px); font-weight: 700; line-height: 1.08; letter-spacing: -0.025em; margin-bottom: 24px; }
+    h1 em { font-style: italic; color: var(--red); }
+    .cs-deck { font-size: 18px; color: var(--ink-light); line-height: 1.75; font-weight: 300; max-width: 580px; }
+
+    .cs-meta { display: flex; gap: 48px; flex-wrap: wrap; padding: 32px 48px; border-bottom: 0.5px solid var(--rule); }
+    .meta-item { display: flex; flex-direction: column; gap: 4px; }
+    .meta-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
+    .meta-val { font-size: 14px; color: var(--ink); font-weight: 500; }
+
+    .cs-body { max-width: 680px; padding: 0 48px 80px; }
+    .cs-section { margin-top: 64px; }
+    h2 { font-family: var(--serif); font-size: 28px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 20px; }
+    h3 { font-family: var(--serif); font-size: 20px; font-weight: 500; letter-spacing: -0.01em; margin-bottom: 12px; margin-top: 32px; }
+    p { font-size: 15px; color: var(--ink-light); line-height: 1.8; margin-bottom: 16px; }
+    p strong { color: var(--ink); font-weight: 600; }
+
+    .pull-quote { border-left: 2px solid var(--red); padding: 4px 0 4px 24px; margin: 36px 0; }
+    .pull-quote p { font-family: var(--serif); font-size: 20px; color: var(--ink); font-style: italic; line-height: 1.5; margin: 0; font-weight: 500; }
+
+    .outcome-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 0.5px solid var(--rule); margin-top: 28px; }
+    .outcome-card { padding: 24px 20px; border-right: 0.5px solid var(--rule); }
+    .outcome-card:last-child { border-right: none; }
+    .outcome-num { font-family: var(--serif); font-size: 32px; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
+    .outcome-desc { font-size: 12px; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; }
+
+    .process-steps { margin-top: 20px; }
+    .step { display: grid; grid-template-columns: 48px 1fr; gap: 20px; padding: 24px 0; border-bottom: 0.5px solid var(--rule); }
+    .step:last-child { border-bottom: none; }
+    .step-num { font-family: var(--serif); font-size: 28px; font-weight: 700; color: var(--red); line-height: 1; padding-top: 2px; }
+    .step-content h3 { font-family: var(--serif); font-size: 18px; font-weight: 500; margin-bottom: 8px; margin-top: 0; }
+    .step-content p { font-size: 13px; color: var(--ink-light); line-height: 1.7; margin: 0; }
+
+    .learnings-list { list-style: none; margin-top: 16px; }
+    .learnings-list li { font-size: 15px; color: var(--ink-light); padding: 14px 0; border-bottom: 0.5px solid var(--rule); line-height: 1.65; display: flex; gap: 14px; }
+    .learnings-list li::before { content: "→"; color: var(--red); font-weight: 600; flex-shrink: 0; }
+    .learnings-list li:last-child { border-bottom: none; }
+
+    .cs-nav-footer { display: flex; justify-content: space-between; align-items: center; padding: 40px 48px; border-top: 0.5px solid var(--rule); flex-wrap: wrap; gap: 20px; }
+    .cs-nav-link { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); text-decoration: none; font-weight: 600; border-bottom: 1px solid var(--ink); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
+    .cs-nav-link:hover { color: var(--red); border-color: var(--red); }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .cs-header { padding: 48px 24px 48px; }
+      .cs-meta { padding: 24px; gap: 24px; }
+      .cs-body { padding: 0 24px 60px; }
+      .outcome-grid { grid-template-columns: 1fr; }
+      .outcome-card { border-right: none; border-bottom: 0.5px solid var(--rule); }
+      .outcome-card:last-child { border-bottom: none; }
+      .cs-nav-footer { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Maitreyee G.</a>
+  <a href="index.html#work" class="nav-back">← All work</a>
+</nav>
+
+<header class="cs-header">
+  <p class="cs-eyebrow">Case Study · PMM · GTM · B2B</p>
+  <h1>Building a product roadmap<br>for a <em>$5M business</em><br>with no PM playbook.</h1>
+  <p class="cs-deck">How I translated customer signal from JCK Expo and behavioral data into a roadmap and GTM strategy that drove a 30% lift in jewellery design performance — while acting as the sole bridge between customers, design, and production.</p>
+</header>
+
+<div class="cs-meta">
+  <div class="meta-item"><span class="meta-label">Timeline</span><span class="meta-val">3 years (Feb 2023 – Jan 2026)</span></div>
+  <div class="meta-item"><span class="meta-label">Role</span><span class="meta-val">Product Marketing Specialist</span></div>
+  <div class="meta-item"><span class="meta-label">Company</span><span class="meta-val">Costar Imports · San Jose, CA</span></div>
+  <div class="meta-item"><span class="meta-label">Outcome</span><span class="meta-val">30% design performance lift</span></div>
+</div>
+
+<div class="cs-body">
+
+  <div class="cs-section">
+    <h2>Context</h2>
+    <p>Costar Imports is a B2B jewellery importer serving retailers and boutiques across the US, with a customer portfolio totalling $5M in revenue. When I joined, there was no formalized product roadmap, no structured customer research process, and no systematic way to translate what customers said at trade shows into decisions the production factory could act on.</p>
+    <p><strong>I was hired as a product marketing specialist. I ended up functioning as a de facto PM.</strong> The role required me to build the infrastructure for customer insight — and then use it.</p>
+    <div class="pull-quote">
+      <p>"The riskiest assumption in B2B product work is that the person who places the order and the person who wears the product want the same thing. At Costar, they almost never did."</p>
+    </div>
+  </div>
+
+  <div class="cs-section">
+    <h2>The process</h2>
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h3>Customer discovery at scale — JCK Expo</h3>
+          <p>America's largest jewellery trade show gave me direct access to hundreds of retail buyers in a compressed window. I built a structured listening approach: not just what customers said they wanted, but what they stopped at, what they picked up, what they put down, and what questions they asked. I came back with pattern-level insight, not just quotes.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h3>Translating behavioral data into roadmap inputs</h3>
+          <p>I paired the qualitative expo signal with quantitative behavioral data — purchase patterns, return rates by design category, repeat order behavior by segment. The combination revealed which design categories had latent demand versus which ones were simply being ordered out of habit. That gap became the roadmap's first priority.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h3>Building the internal product roadmap</h3>
+          <p>Working with the dedicated sales representative, I built the first structured internal roadmap: prioritized design categories, market trend inputs, and customer segment needs mapped to a rolling timeline. The format was simple by design — the audience was production and sales, not engineers, so the artifact had to be actionable without being technical.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <h3>GTM strategy and product narratives</h3>
+          <p>Each design category needed a narrative: not a product description, but a story that a retail buyer could tell their own customer. I developed product documentation and go-to-market materials that framed the collection in terms of the end customer's desire, not the importer's inventory. This is the same principle as positioning in tech GTM — you sell the job to be done, not the feature.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">05</div>
+        <div class="step-content">
+          <h3>Closing the feedback loop with production</h3>
+          <p>The final leg of the loop was translating customer feedback and design KPIs back to the factory. I acted as the bridge — taking what I'd learned from retail buyers and converting it into design briefs the production team could actually act on. This required understanding both sides of the conversation: what "customers want more organic shapes" means to a retail buyer and what it means to someone cutting metal in a factory.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cs-section">
+    <h2>Results</h2>
+    <div class="outcome-grid">
+      <div class="outcome-card">
+        <div class="outcome-num">30%</div>
+        <div class="outcome-desc">Lift in jewellery design performance</div>
+      </div>
+      <div class="outcome-card">
+        <div class="outcome-num">$5M</div>
+        <div class="outcome-desc">Customer revenue portfolio managed</div>
+      </div>
+      <div class="outcome-card">
+        <div class="outcome-num">1</div>
+        <div class="outcome-desc">JCK Expo — US's largest jewellery trade show</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cs-section">
+    <h2>What I learned</h2>
+    <ul class="learnings-list">
+      <li>In B2B, your customer's customer is the real user. I spent three years learning to hold both perspectives simultaneously: what the retail buyer needed commercially, and what the end consumer needed emotionally. Most product decisions at Costar lived in the gap between those two.</li>
+      <li>A roadmap without a narrative is just a list. The hardest part of this work wasn't the research — it was turning findings into a prioritization argument that people with different incentives (sales, production, ownership) could all read as obviously correct.</li>
+      <li>Trade shows are user research, not just sales. JCK taught me how to run structured observation at scale: watch what people do, not just what they say. I brought that same instinct from my newsroom days — reading a room, reading a crowd, extracting signal from behavior.</li>
+      <li>Owning the full loop changes the quality of the input. Because I was involved from research to factory feedback, I had unusually high fidelity signal at every stage. The 30% lift wasn't one decision — it was the compound effect of tighter feedback loops across the whole system.</li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="cs-nav-footer">
+  <a href="agentic-case-study.html" class="cs-nav-link">← Previous case study</a>
+  <a href="index.html#contact" class="cs-nav-link">Get in touch →</a>
+</div>
+
+</body>
+</html>
